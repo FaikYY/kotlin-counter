@@ -1,6 +1,6 @@
 package com.example.calculator
 
-class Calculator {
+class Counter {
     var number = 0
 
     fun increment(){
