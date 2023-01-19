@@ -11,13 +11,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button_increase: Button = findViewById<Button>(R.id.button_increase)
-        var text_number: TextView = findViewById(R.id.text_number)
-        var number = 0
-        text_number.setText("Number: " + "$number")
+        val text_number: TextView = findViewById(R.id.text_number)
+        val calculator = Calculator()
+        text_number.text = "Number: ${calculator.number}"
 
         button_increase.setOnClickListener{
-            number++
-            text_number.setText("Number: " + "$number")
+            calculator.increment()
+            text_number.text = "Number: ${calculator.number}"
         }
     }
 
